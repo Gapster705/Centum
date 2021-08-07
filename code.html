@@ -42,7 +42,7 @@
                         <a class="nav-link active" aria-current="page" href="code.html">The Code</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                        <a class="nav-link" target="_blank" href="https://github.com/Gapster705/Centum">Git Repo</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" target="_blank" href="#">About</a>
@@ -59,60 +59,58 @@
             <div class="row row-cols-1 row-cols-lg-2">
                 <div class="col-lg-8">
                     <pre class="line-numbers"><code class="language-javascript">
+                        //get the values from the page
+                        //Starts or controller function
+                        function getValues(){
+                            //get values from the page
+                            let startValue = document.getElementById("startValue").value;
+                            let endValue = document.getElementById("endValue").value;
+
+                            // input validation
+                            // parse into integers
+                            startValue = parseInt(startValue);
+                            endValue = parseInt(endValue);
+
+                            if(Number.isInteger(startValue) && Number.isInteger(endValue)){
+                                //call generateNumbers
+                                let numbers = generateNumbers(startValue, endValue);
                         
+                                //call displayNumbers
+                                displayNumbers(numbers);
+                            } else{
+                                alert("You must enter integers.");
+                            }
+                        }
 
-//get the values from the page
-//Starts or controller function
-function getValues(){
-    //get values from the page
-    let startValue = document.getElementById("startValue").value;
-    let endValue = document.getElementById("endValue").value;
+                        //generate numbers from the start value to the end value
+                        //logic function(s)
+                        function generateNumbers(startValue, endValue){
+                            let numbers = [];
 
-    // input validation
-    // parse into integers
-    startValue = parseInt(startValue);
-    endValue = parseInt(endValue);
+                            for (let i = startValue; i <= endValue; i++) {
+                            numbers.push(i);         
+                            }
+                            return numbers;
+                        }
 
-    if(Number.isInteger(startValue) && Number.isInteger(endValue)){
-        //call generateNumbers
-        let numbers = generateNumbers(startValue, endValue);
-  
-        //call displayNumbers
-        displayNumbers(numbers);
-    } else{
-        alert("You must enter integers.");
-    }
-}
+                        //display the numbers and mark the even numbers in bold
+                        //display or view functions
+                        function displayNumbers(numbers){
+                            let templateRows = "";
+                            let className = "";
 
-//generate numbers from the start value to the end value
-//logic function(s)
-function generateNumbers(startValue, endValue){
-    let numbers = [];
+                            for (let index = 0; index < numbers.length; index++) {
+                                let number = numbers[index];
 
-    for (let i = startValue; i <= endValue; i++) {
-       numbers.push(i);         
-    }
-    return numbers;
-}
-
-//display the numbers and mark the even numbers in bold
-//display or view functions
-function displayNumbers(numbers){
-    let templateRows = "";
-    let className = "";
-
-    for (let index = 0; index < numbers.length; index++) {
-        let number = numbers[index];
-
-        if(number % 2 == 0){
-            className = "even";
-        } else {
-            className = "odd";
-        }
-        templateRows += `<tr><td class="${className}">${number}</td></tr>`;
-    }
-    document.getElementById("results").innerHTML = templateRows;
-}
+                                if(number % 2 == 0){
+                                    className = "even";
+                                } else {
+                                    className = "odd";
+                                }
+                                templateRows += `<tr><td class="${className}">${number}</td></tr>`;
+                            }
+                            document.getElementById("results").innerHTML = templateRows;
+                        }
                     </code>
 
                     </pre>
@@ -139,10 +137,10 @@ function displayNumbers(numbers){
                 </div>
                 <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
                     <div class="row">
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></div>
-                        <div class="col social"><a href="#" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></div>
+                        <div class="col social"><a href="https://www.linkedin.com/in/gp-kriel-38551b23/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a></div>
+                        <div class="col social"><a href="https://github.com/Gapster705" target="_blank"><i class="fab fa-github fa-2x"></i></a></div>
+                        <div class="col social"><a href="https://twitter.com/gpkriel" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></div>
+                        <div class="col social"><a href="https://www.youtube.com/c/GPKriel" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></div>
                     </div>
                 </div>
             </div>
