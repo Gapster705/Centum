@@ -108,3 +108,8 @@ code[class*="language-"],
         word-break: break-all;
         word-wrap: break-word;
     }
+
+.logofont {
+    font-family: 'Seymour One', sans-serif;
+    font-size: x-large; 
+}
