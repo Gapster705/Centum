@@ -113,3 +113,12 @@ code[class*="language-"],
     font-family: 'Seymour One', sans-serif;
     font-size: x-large; 
 }
+
+.even {
+    font-weight: bold;
+    font-size: large;
+}
+
+.odd {
+    font-weight: 100;
+}
