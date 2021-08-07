@@ -1,0 +1,110 @@
+:root {
+    --primary-color: #1d5888;
+    --secondary-color: #00a500;
+    --dark-color: #292929;
+    --white-color: #e7e7e7;
+}
+
+body {
+    color: var(--dark-color);
+}
+
+.gapsterlogo {
+    color: var(--white-color);
+    font-weight: bolder;
+    font-family: 'Lovelo', sans-serif;
+    font-size: x-large;
+    /* text-shadow: 2px 2px 5px var(--primary-color); */
+    background: -webkit-linear-gradient(var(--white-color), var(--dark-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.gapsterlogo:hover {
+    /* color: var(--primary-color); */
+    /* text-shadow: 2px 2px 5px var(--white-color); */
+    background: -webkit-linear-gradient(var(--dark-color), var(--white-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gapstermark {
+    color: var(--white-color);
+    font-weight: bolder;
+    font-family: 'Lovelo', sans-serif;
+    font-size: x-large; 
+    /* text-shadow: 2px 2px 5px var(--primary-color); */
+    background: -webkit-linear-gradient(var(--white-color), var(--dark-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.gapstermark:hover {
+    /* color: var(--primary-color); */
+    /* text-shadow: 2px 2px 5px var(--white-color); */
+    background: -webkit-linear-gradient(var(--dark-color), var(--white-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+footer {
+    background-color: var(--dark-color);
+    padding-right: 1rem;
+}
+
+footer .social>a {
+    color: var(--white-color);
+    opacity: 0.75;
+}
+
+footer .social>a:hover {
+    opacity: 0.9;
+    color: var(--secondary-color);
+}
+
+nav {
+    background-color: var(--dark-color);
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: var(--primary-color);
+}
+
+main>.container {
+    padding: 60px 15px 0;
+}
+
+.bsicon{
+    color: purple;
+}
+
+.jsicon {
+    color: rgb(226, 211, 4);
+}
+
+.html5icon {
+    color: orangered;
+}
+
+.css3icon {
+    color: rgb(11, 82, 214);
+}
+
+.sticky-nav {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100 % ;
+}
+
+.checklist > li i{
+    color: var(--secondary-color);
+}
+
+code[class*="language-"],
+    pre[class*="language-"] {
+        white-space: pre-wrap;
+        word-break: break-all;
+        word-wrap: break-word;
+    }
